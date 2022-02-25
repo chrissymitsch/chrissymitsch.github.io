@@ -1,5 +1,6 @@
 <template>
-  <header>
+  <header id="top">
+      <figure class="wave-back"></figure>
       <h2 class="hellooo">Hellooo.</h2>
       <div class="name">
         <h1 class="accent">Chrissy</h1>
@@ -9,6 +10,8 @@
         <h3>I'm a</h3>
         <h2 class="accent">Developer</h2>
       </div>
+      <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
+      <figure class="wave-front"></figure>
       <div class="code">
         <p>
           <strong>if</strong>
@@ -22,7 +25,6 @@
           <strong>endif</strong>
         </p>
       </div>
-      <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
   </header>
 </template>
 
@@ -38,10 +40,6 @@ header {
   max-width: 100vw;
   max-height: 100%;
   position: absolute;
-}
-
-.bridge img {
-  width: 100%;
 }
 
 h1, h2, h3 {
@@ -84,7 +82,7 @@ h3 {
 
 .whatami {
   position: absolute;
-  right: 15%;
+  left: 57vw;
   top: 45vh;
   margin-top: 5vh;
 }
@@ -97,7 +95,7 @@ h3 {
 .code {
   font-size: 3vh;
   position: absolute;
-  right: 6%;
+  left: 65vw;
   top: 70vh;
 }
 
@@ -108,6 +106,27 @@ h3 {
 .code strong {
   color: var(--color-text-highlight);
 }
+
+.wave-front, .wave-back {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.wave-front {
+  background-image: url(./../assets/img/wave-front.svg);
+}
+
+.wave-back {
+  background-image: url(./../assets/img/wave-back.svg);
+}
+
+
+/* Responsiveness */
 
 @media (max-width: 1200px) { /* 1024 */
   .bridge {
@@ -131,7 +150,7 @@ h3 {
   }
 }
 
-@media (max-width: 920px) { /* 768 */
+@media (max-aspect-ratio: 4/3) {
   header {
     display: flex;
     justify-content: flex-start;
@@ -158,23 +177,31 @@ h3 {
 
   .bridge {
     width: 140%;
-    left: -20%;
+    left: -50%;
+    bottom: -20vh;
   }
 
   .bridge img {
     width: 140%;
   }
+
+  .code {
+    top: 60vh;
+    right: 0;
+    left: inherit;
+    font-size: 3vw;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-aspect-ratio: 9/15) {
   .bridge {
-    bottom: -10vh;
-    width: 160%;
-    left: -30%;
+    bottom: -34vh;
+    left: -39vh;
+    width: 100vh;
   }
 
   .bridge img {
-    width: 160%;
+    width: 100vh;
   }
 }
 </style>

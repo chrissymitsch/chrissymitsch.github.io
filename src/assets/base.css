@@ -49,6 +49,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
 .accent {
   color: var(--color-text-accent);
   font-family: var(--font-family-text-accent);
