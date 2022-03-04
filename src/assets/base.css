@@ -6,17 +6,19 @@
   --vt-c-cyclamen: #F375A8;
   --vt-c-yellow-green-crayola: #C4D37B;
   --vt-c-vegas-gold: #A89734;
-  --vt-c-white: #ffffff;
+  --vt-c-white: #eeeeee;
 }
 
 /* semantic color variables for this project */
 :root {
   --color-background: var(--vt-c-deep-jungle-green);
+  --color-background-dark: var(--vt-c-phthalo-green);
 
   --color-heading: var(--vt-c-white);
   --color-text: var(--vt-c-white);
   --color-text-accent: var(--vt-c-cyclamen);
   --color-text-highlight: var(--vt-c-yellow-green-crayola);
+  --color-text-lowlight: var(--vt-c-vegas-gold);
 
   --font-family-text: Inter, -apple-system, BlinkMacSystemFont, Nunito, Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-family-text-accent: Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -57,9 +59,10 @@ a {
   text-decoration: none;
 }
 
-.accent {
+.accent, mark {
   color: var(--color-text-accent);
   font-family: var(--font-family-text-accent);
+  background: transparent;
 }
 
 .code {

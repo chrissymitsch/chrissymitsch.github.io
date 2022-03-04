@@ -1,30 +1,30 @@
 <template>
   <header id="top">
-      <figure class="wave-back"></figure>
-      <h2 class="hellooo">Hellooo.</h2>
-      <div class="name">
-        <h1 class="accent">Chrissy</h1>
-        <h1>here.</h1>
-      </div>
-      <div class="whatami">
-        <h3>I'm a</h3>
-        <h2 class="accent">Developer</h2>
-      </div>
-      <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
-      <figure class="wave-front"></figure>
-      <div class="code">
-        <p>
-          <strong>if</strong>
-          youWantToKnowMore(aboutMe)
-        </p>
-        <p>
-          <strong>then</strong>
-          scrollDown
-        </p>
-        <p>
-          <strong>endif</strong>
-        </p>
-      </div>
+    <figure class="wave-back"></figure>
+    <h2 class="hellooo">Hellooo.</h2>
+    <div class="name">
+      <h1 class="accent">Chrissy</h1>
+      <h1>here.</h1>
+    </div>
+    <div class="whatami">
+      <h3>I'm a</h3>
+      <h2 class="accent">Developer</h2>
+    </div>
+    <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
+    <figure class="wave-front"></figure>
+    <div class="code">
+      <p>
+        <strong>if</strong>
+        youWantToKnowMore(aboutMe)
+      </p>
+      <p>
+        <strong>then</strong>
+        scrollDown
+      </p>
+      <p>
+        <strong>endif</strong>
+      </p>
+    </div>
   </header>
 </template>
 
@@ -67,12 +67,17 @@ h3 {
   position: absolute;
   left: 10%;
   top: 20vh;
+  opacity: 0;
+  animation: fadeIn 3s ease-out 0.5s forwards;
 }
 
 .name {
   left: 17%;
   top: 25vh;
   margin-top: 5vh;
+  transform: translateX(-5vw);
+  opacity: 0;
+  animation: rollIn 2s ease-out 1s forwards, fadeIn 2s ease-out 1s forwards;
 }
 
 .name h1 {
@@ -87,9 +92,19 @@ h3 {
   margin-top: 5vh;
 }
 
+.whatami h3 {
+  transform: translateY(-5vh);
+  opacity: 0;
+  animation: rollDown 2s ease-out 3s forwards, fadeIn 1s ease-out 3s forwards;
+}
+
 .whatami .accent {
   font-size: 9vh;
   top: 8vh;
+  transform-origin: top center;
+  transform: scale(0.7);
+  opacity: 0;
+  animation: zoomIn 2s ease-out 3.5s forwards, fadeIn 1s ease-out 3.5s forwards;
 }
 
 .code {
@@ -97,10 +112,14 @@ h3 {
   position: absolute;
   left: 65vw;
   top: 70vh;
+  transform: translateY(5vh);
+  opacity: 0;
+  animation: rollUp 1s ease-out 5s forwards, fadeIn 1s ease-out 5s forwards;
 }
 
 .code p {
-  line-height: 120%;
+  line-height: 300%;
+  animation: lineHeight 2s ease-out 5s forwards;
 }
 
 .code strong {
@@ -111,9 +130,9 @@ h3 {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50vh;
-  background-position: center bottom;
-  background-size: 100%;
+  height: 30vh;
+  background-position: top center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -202,6 +221,66 @@ h3 {
 
   .bridge img {
     width: 100vh;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateX(-5vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rollDown {
+  0% {
+    transform: translateY(-5vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rollUp {
+  0% {
+    transform: translateY(5vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lineHeight {
+  0% {
+    line-height: 300%;
+  }
+
+  100% {
+    line-height: 120%;
   }
 }
 </style>

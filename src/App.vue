@@ -1,19 +1,5 @@
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import Introduction from './components/Introduction.vue'
-import Navigation from './components/Navigation.vue'
-import Profile from './components/Profile.vue'
-
-export default {
-  components: {
-    HelloWorld, Navigation, Introduction, Profile,
-  }
-}
-</script>
-
 <template>
     <hello-world></hello-world>
-
     <introduction></introduction>
     <profile></profile>
 
@@ -30,11 +16,16 @@ export default {
 
 </template>
 
+<script>
+export default {
+  created() {
+    console.log("%cHellooo! You're a", "font-family: sans-serif; font-size: 16px; font-weight: bold; color: #fff; background-color: #004741;");
+    console.log("%cDeveloper", "font-family: sans-serif; font-size: 20px; font-weight: bold; color: #F375A8");
+    console.log("%ctoo?", "font-family: sans-serif; font-size: 16px; font-weight: bold; color: #fff; background-color: #004741;");
+  },
+}
+</script>
+
 <style>
 @import './assets/base.css';
-
-#app {
-  max-width: 1920px;
-  margin: auto;
-}
 </style>
