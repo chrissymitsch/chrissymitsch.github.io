@@ -1,7 +1,7 @@
 <template>
     <hello-world></hello-world>
-    <!-- <introduction></introduction>
-    <profile></profile> -->
+    <introduction></introduction>
+    <profile></profile>
 
     <section id="career">
         <h1>Career</h1>

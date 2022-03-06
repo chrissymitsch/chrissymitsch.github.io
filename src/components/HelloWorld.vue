@@ -104,7 +104,7 @@ h3 {
 
 .code {
   position: absolute;
-  bottom: 10vh;
+  bottom: 20vh;
   font-size: var(--font-size-s);
   opacity: 0;
   transform: translateY(5vh);

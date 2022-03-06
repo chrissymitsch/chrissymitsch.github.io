@@ -1,7 +1,5 @@
 <template>
-    <figure class="halfling" :class="{ fixed: fixed }">
-      <img src="./../../assets/img/halfling.png" alt="" />
-    </figure>
+    <figure class="halfling" :class="{ fixed: fixed }"></figure>
 </template>
 
 <script>
@@ -35,10 +33,13 @@ export default ({
 <style scoped>
 .halfling {
   position: absolute;
-  right: -25vmin;
+  left: 0;
   top: -20vh;
   width: 100%;
   height: 100vh;
+  background: url(/src/assets/img/halfling.png) no-repeat;
+  background-position: 150%;
+  background-size: contain;
 }
 
 .halfling img {
