@@ -2,7 +2,6 @@
   <main>
     <halfling></halfling>
     <card></card>
-    <magic-picture></magic-picture>
   </main>
 </template>
 

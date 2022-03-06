@@ -34,11 +34,12 @@ header {
   overflow: hidden;
 }
 .bridge {
+  position: absolute;
+  left: 0;
   bottom: -20vh;
   width: 100vh;
   max-width: 100vw;
   max-height: 100%;
-  position: absolute;
 }
 
 h1, h2, h3 {
@@ -67,7 +68,7 @@ h3 {
   left: max(0%, calc(30vw - 40vh));
   top: min(20vh, 20vw);
   opacity: 0;
-  animation: fadeIn 3s ease-out 0.5s forwards;
+  animation: fadeIn 2s ease-out 0.25s forwards;
 }
 
 .name {
@@ -76,7 +77,7 @@ h3 {
   margin-top: 5vh;
   transform: translateX(-5vw);
   opacity: 0;
-  animation: rollIn 2s ease-out 1s forwards, fadeIn 2s ease-out 1s forwards;
+  animation: rollIn 1s ease-out 0.5s forwards, fadeIn 2s ease-out 0.5s forwards;
 }
 
 .hellooo, .name h1, .whatami, .code {
@@ -95,7 +96,7 @@ h3 {
 .whatami h3 {
   transform: translateY(-5vh);
   opacity: 0;
-  animation: rollDown 2s ease-out 3s forwards, fadeIn 1s ease-out 3s forwards;
+  animation: rollDown 1s ease-out 1s forwards, fadeIn 1s ease-out 1s forwards;
 }
 
 .whatami .accent {
@@ -104,7 +105,7 @@ h3 {
   transform-origin: top center;
   transform: scale(0.7);
   opacity: 0;
-  animation: zoomIn 2s ease-out 3.5s forwards, fadeIn 1s ease-out 3.5s forwards;
+  animation: zoomIn 1s ease-out 1.5s forwards, fadeIn 1s ease-out 1.5s forwards;
 }
 
 .code {
@@ -114,12 +115,12 @@ h3 {
   bottom: max(15vmin, 0rem);
   transform: translateY(5vh);
   opacity: 0;
-  animation: rollUp 1s ease-out 5s forwards, fadeIn 1s ease-out 5s forwards;
+  animation: rollUp 1s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
 }
 
 .code p {
   line-height: 300%;
-  animation: lineHeight 2s ease-out 5s forwards;
+  animation: lineHeight 1s ease-out 2s forwards;
 }
 
 .code strong {
@@ -128,7 +129,7 @@ h3 {
 
 .wave-front, .wave-back {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
   height: 30vh;
   background-position: top center;
@@ -188,9 +189,7 @@ h3 {
   }
 
   .code {
-    right: 0;
-    left: inherit;
-    text-shadow: 0 0 0.1rem black, 0 0 0.25rem black, 0 0 0.5rem black;
+    display: none;
   }
 }
 

@@ -1,5 +1,7 @@
 <template>
-    <figure class="halfling" :class="{ fixed: fixed }"></figure>
+    <figure class="halfling" :class="{ fixed: fixed }">
+      <img src="./../../assets/img/halfling.png" alt="" />
+    </figure>
 </template>
 
 <script>
@@ -33,14 +35,16 @@ export default ({
 <style scoped>
 .halfling {
   position: absolute;
-  right: 0;
+  right: -25vmin;
   top: -20vh;
   width: 100%;
   height: 100vh;
-  background-image: url(./../../assets/img/halfling.png);
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.halfling img {
+  width: auto;
+  height: 100%;
+  float: right;
 }
 
 .fixed {
@@ -49,4 +53,19 @@ export default ({
   position: fixed;
 }
 
+@media (max-aspect-ratio: 4/3) {
+  .halfling, .fixed {
+    position: relative;
+    top: inherit;
+    right: 0;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .halfling img {
+    width: min(100%, 600px);
+    height: auto;
+    float: inherit;
+  }
+}
 </style>
