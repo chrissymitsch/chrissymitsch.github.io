@@ -1,4 +1,4 @@
-<tremplate>
+<template>
   <nav>
     <a href="#top">
       <figure class="glasses">
@@ -10,7 +10,7 @@
       </figure>
     </a>
   </nav>
-</tremplate>
+</template>
 
 <style scoped>
 nav {

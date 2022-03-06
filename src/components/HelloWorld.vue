@@ -100,7 +100,7 @@ h3 {
 
 .whatami .accent {
   font-size: max(min(6rem, 10vmin), 2rem);
-  top: 2rem;
+  top: 3rem;
   transform-origin: top center;
   transform: scale(0.7);
   opacity: 0;
