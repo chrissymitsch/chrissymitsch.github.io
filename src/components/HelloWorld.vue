@@ -190,6 +190,7 @@ h3 {
   .code {
     right: 0;
     left: inherit;
+    text-shadow: 0 0 0.1rem black, 0 0 0.25rem black, 0 0 0.5rem black;
   }
 }
 

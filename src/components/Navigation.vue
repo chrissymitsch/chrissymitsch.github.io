@@ -1,4 +1,4 @@
-<template>
+<tremplate>
   <nav>
     <a href="#top">
       <figure class="glasses">
@@ -10,7 +10,7 @@
       </figure>
     </a>
   </nav>
-</template>
+</tremplate>
 
 <style scoped>
 nav {
@@ -18,7 +18,7 @@ nav {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 4em;
+  width: 4rem;
 }
 
 .glasses {
@@ -39,35 +39,35 @@ nav {
 
 .glasses h1 {
   font-family: var(--font-family-text-accent);
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
 .glasses h2 {
   font-family: var(--font-family-text-accent);
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .glasses h3 {
   font-family: var(--font-family-text-code);
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  line-height: 1.7em;
-  letter-spacing: 0.1em;
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
   transform: rotate(-64deg);
   transform-origin: top left;
   position: absolute;
-  left: 2.2em;
-  top: 3.1em;
+  left: 2.2rem;
+  top: 3.1rem;
 }
 
 .glasses h3:last-child {
-  left: 5.6em;
-  top: 3em;
-  letter-spacing: 0.3em;
+  left: 5.6rem;
+  top: 3rem;
+  letter-spacing: 0.3rem;
 }
 
 /* Responsiveness */
