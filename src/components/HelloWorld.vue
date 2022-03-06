@@ -35,11 +35,11 @@ header {
 }
 
 .bridge {
-  bottom: -20vh;
-  width: 100vh;
-  max-width: 100vw;
+  bottom: max(-100rem, -20vmin);
+  width: max(50rem, 100vmin);
   max-height: 100%;
   position: absolute;
+  left: max(-25rem, calc(30vw - 50vh));
 }
 
 h1, h2, h3 {
@@ -49,47 +49,48 @@ h1, h2, h3 {
 
 h1 {
   font-weight: 700;
-  font-size: 13.5vh;
+  font-size: max(min(8rem, 13.5vmin), 2rem);
 }
 
 h2 {
   font-weight: 700;
-  font-size: 8vh;
+  font-size: max(min(4rem, 8vmin), 1rem);
 }
 
 h3 {
   position: absolute;
   font-weight: 700;
-  font-size: 6vh;
+  font-size: max(min(3rem, 6vmin), 1rem);
 }
 
 .hellooo {
   position: absolute;
-  left: 10%;
-  top: 20vh;
+  left: max(0%, calc(30vw - 40vh));
+  top: min(20vh, 20vw);
   opacity: 0;
   animation: fadeIn 3s ease-out 0.5s forwards;
 }
 
 .name {
-  left: 17%;
-  top: 25vh;
+  left: max(0%, calc(25vw - 15vh));
+  top: min(25vh, 25vw);
   margin-top: 5vh;
   transform: translateX(-5vw);
   opacity: 0;
   animation: rollIn 2s ease-out 1s forwards, fadeIn 2s ease-out 1s forwards;
 }
 
-.name h1 {
-  margin-left: 1.5vh;
-  margin-right: 1.5vh;
+.hellooo, .name h1, .whatami, .code {
+  margin-left: 1.5vmin;
+  margin-right: 1.5vmin;
 }
 
 .whatami {
   position: absolute;
-  left: 57vw;
-  top: 45vh;
+  left: max(0%, calc(75vw - 47vh));
+  top: max(45vmin, 10rem);
   margin-top: 5vh;
+  width: max(50vw, 100vmin);
 }
 
 .whatami h3 {
@@ -99,8 +100,8 @@ h3 {
 }
 
 .whatami .accent {
-  font-size: 9vh;
-  top: 8vh;
+  font-size: max(min(6rem, 10vmin), 2rem);
+  top: 2rem;
   transform-origin: top center;
   transform: scale(0.7);
   opacity: 0;
@@ -108,10 +109,11 @@ h3 {
 }
 
 .code {
-  font-size: 3vh;
+  width: 30ch;
+  font-size: max(min(1.5rem, 5vmin), 1rem);
   position: absolute;
-  left: 65vw;
-  top: 70vh;
+  left: max(0%, calc(100vw - 60vh));
+  top: max(70vmin, 22rem);
   transform: translateY(5vh);
   opacity: 0;
   animation: rollUp 1s ease-out 5s forwards, fadeIn 1s ease-out 5s forwards;
@@ -145,84 +147,6 @@ h3 {
 }
 
 
-/* Responsiveness */
-
-@media (max-width: 1200px) { /* 1024 */
-  .bridge {
-    bottom: -17vh;
-  }
-
-  h1 {
-    font-size: 10vh;
-  }
-
-  h2 {
-    font-size: 6vh;
-  }
-
-  h3 {
-    font-size: 4vh;
-  }
-
-  .whatami .accent {
-    font-size: 7vh;
-  }
-}
-
-@media (max-aspect-ratio: 4/3) {
-  header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: column;
-  }
-
-  h3, .hellooo, .whatami {
-    position: relative;
-  }
-
-  .hellooo {
-    margin-top: 5vh;
-  }
-
-  .hellooo, .name, .whatami, .whatami .accent {
-    left: inherit;
-    top: inherit;
-    right: inherit;
-    bottom: inherit;
-    text-align: center;
-    display: block;
-  }
-
-  .bridge {
-    width: 140%;
-    left: -50%;
-    bottom: -20vh;
-  }
-
-  .bridge img {
-    width: 140%;
-  }
-
-  .code {
-    top: 60vh;
-    right: 0;
-    left: inherit;
-    font-size: 3vw;
-  }
-}
-
-@media (max-aspect-ratio: 9/15) {
-  .bridge {
-    bottom: -34vh;
-    left: -39vh;
-    width: 100vh;
-  }
-
-  .bridge img {
-    width: 100vh;
-  }
-}
 
 @keyframes fadeIn {
   0% {
