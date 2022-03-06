@@ -30,21 +30,21 @@
 
 <style scoped>
 header {
-  min-height: calc(100vh - 4rem);
-  max-width: 1024px;
+  min-height: calc(100vh - 5vh);
+  max-width: var(--max-content-width);
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 5vh;
   row-gap: 5vh;
 }
 
 .bridge {
   position: absolute;
-  left: 0;
-  bottom: min(calc(100vmax - 150vmin), 0%);
+  left: clamp(-20vh, calc(100vh - 150vw), 0%);
+  bottom: clamp(-20vh, calc(100vh - 150vw), 0%);
   width: 100vh;
   max-width: 100vw;
   max-height: 100%;
@@ -57,15 +57,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: max(min(8rem, 13.5vmin), 2rem);
+  font-size: var(--font-size-xl);
 }
 
 h2 {
-  font-size: max(min(4rem, 8vmin), 1rem);
+  font-size: var(--font-size-l);
 }
 
 h3 {
-  font-size: max(min(3rem, 6vmin), 1rem);
+  font-size: var(--font-size-m);
 }
 
 .hellooo {
@@ -96,7 +96,6 @@ h3 {
 }
 
 .whatami .accent {
-  font-size: max(min(6rem, 10vmin), 2rem);
   opacity: 0;
   transform-origin: top center;
   transform: scale(0.7);
@@ -106,7 +105,7 @@ h3 {
 .code {
   position: absolute;
   bottom: 10vh;
-  font-size: max(min(1.2rem, 5vmin), 1rem);
+  font-size: var(--font-size-s);
   opacity: 0;
   transform: translateY(5vh);
   animation: rollUp 1s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
@@ -144,7 +143,22 @@ h3 {
   background-image: url(./../assets/img/wave-back.svg);
 }
 
-/* Responsiveness */
+
+@media (min-aspect-ratio: 4/3) {
+  .hellooo {
+    margin-top: 10vh;
+    align-self: flex-start;
+  }
+
+  .whatami {
+    align-self: flex-end;
+    align-items: flex-start;
+  }
+
+  .code {
+    right: 0;
+  }
+}
 
 
 @keyframes fadeIn {
