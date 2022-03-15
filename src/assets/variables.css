@@ -28,7 +28,7 @@
 
   --font-size-xl: max(min(8rem, 13.5vmin), 2rem);
   --font-size-l: max(min(4rem, 8vmin), 1rem);
-  --font-size-m: max(min(3rem, 6vmin), 1rem);
-  --font-size-s: max(min(0.8rem, 5vmin), 0.5rem);
-  --font-size-xs: ;
+  --font-size-m: max(min(3rem, 6vmin), 0.8rem);
+  --font-size-s: max(min(1rem, 5vmin), 0.6rem);
+  --font-size-xs: max(min(0.8rem, 3vmin), 0.3rem);
 }

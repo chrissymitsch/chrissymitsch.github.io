@@ -13,3 +13,9 @@ video {
   border-bottom-left-radius: 0;
 }
 </style>
+
+// var video = document.getElementById("video-id-name");
+
+// if ( video.readyState === 4 ) {
+//     // it's loaded
+// }

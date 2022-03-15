@@ -7,6 +7,16 @@
       <h1>here.</h1>
     </div>
     <div class="whatami">
+      <figure class="twinkle">
+        <img src="./../assets/img/stern1.gif" class="big" /> <!-- big -->
+        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
+        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
+        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
+        <img src="./../assets/img/stern2.gif" />
+        <img src="./../assets/img/stern2.gif" />
+        <img src="./../assets/img/stern1.gif" class="big" /> <!-- big -->
+        <img src="./../assets/img/stern2.gif" />
+      </figure>
       <h3>I'm a</h3>
       <h2 class="accent">Developer</h2>
     </div>
@@ -48,6 +58,8 @@ header {
   width: 100vh;
   max-width: 100vw;
   max-height: 100%;
+  transform: translateX(-10vw);
+  animation: bridgeIn 2s ease-out forwards;
 }
 
 h1, h2, h3 {
@@ -100,6 +112,65 @@ h3 {
   transform-origin: top center;
   transform: scale(0.7);
   animation: zoomIn 1s ease-out 1.5s forwards, fadeIn 1s ease-out 1.5s forwards;
+}
+
+.twinkle {
+  position: absolute;
+  width: max-content;
+}
+
+.twinkle img {
+  width: var(--font-size-m);
+  opacity: 0;
+  animation: zoomIn 1s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
+}
+
+.twinkle img.big {
+  width: var(--font-size-l);
+}
+
+.twinkle img.small {
+  width: calc(var(--font-size-s) + var(--font-size-xs));
+}
+
+.twinkle img:nth-child(1) {
+  left: -40%;
+  top: var(--font-size-s);
+}
+
+.twinkle img:nth-child(2) {
+  left: -40%;
+  top: var(--font-size-s);
+}
+
+.twinkle img:nth-child(3) {
+  left: -35%;
+  top: 0;
+}
+
+.twinkle img:nth-child(4) {
+  left: -30%;
+  top: calc(var(--font-size-xl) + var(--font-size-s));
+}
+
+.twinkle img:nth-child(5) {
+  left: -20%;
+  top: var(--font-size-l);
+}
+
+.twinkle img:nth-child(6) {
+  left: 10%;
+  top: calc(var(--font-size-m) * (-1));
+}
+
+.twinkle img:nth-child(7) {
+  left: 30%;
+  top: var(--font-size-s);
+}
+
+.twinkle img:nth-child(8) {
+  left: -10%;
+  top: var(--font-size-xl);
 }
 
 .code {
@@ -160,6 +231,16 @@ h3 {
   }
 }
 
+
+@keyframes bridgeIn {
+  0% {
+    transform: translateX(-10vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
 
 @keyframes fadeIn {
   0% {

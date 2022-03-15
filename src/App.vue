@@ -1,5 +1,5 @@
 <template>
-    <hello-world></hello-world>
+    <hero></hero>
     <introduction></introduction>
     <profile></profile>
 
