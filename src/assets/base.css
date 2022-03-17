@@ -14,17 +14,30 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  background-image: url(/src/assets/img/milkyway.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   line-height: 1.6;
   font-family: var(--font-family-text);
-  font-size: 15px;
+  font-size: var(--font-size-s);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-image: url(/src/assets/img/milkyway.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.galaxy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(/src/assets/img/milkyway.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /* animation: galaxy 20s ease-in-out alternate infinite; */
 }
 
 img {
@@ -43,4 +56,13 @@ a {
 
 .code {
   font-family: var(--font-family-text-code);
+}
+
+@keyframes galaxy {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(-5deg);
+  }
 }

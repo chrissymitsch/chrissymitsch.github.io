@@ -22,32 +22,18 @@
     </div>
     <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
     <figure class="wave-front"></figure>
-    <div class="code">
-      <p>
-        <strong>if</strong>
-        youWantToKnowMore(aboutMe)
-      </p>
-      <p>
-        <strong>then</strong>
-        scrollDown
-      </p>
-      <p>
-        <strong>endif</strong>
-      </p>
-    </div>
   </header>
 </template>
 
 <style scoped>
 header {
-  min-height: calc(100vh - 5vh);
+  min-height: 100vh;
   max-width: var(--max-content-width);
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   margin: auto;
-  margin-top: 5vh;
   row-gap: 5vh;
 }
 
@@ -81,6 +67,7 @@ h3 {
 }
 
 .hellooo {
+  margin-top: 15vh;
   opacity: 0;
   animation: fadeIn 2s ease-out 0.25s forwards;
 }
@@ -173,25 +160,7 @@ h3 {
   top: var(--font-size-xl);
 }
 
-.code {
-  position: absolute;
-  bottom: 20vh;
-  font-size: var(--font-size-s);
-  opacity: 0;
-  transform: translateY(5vh);
-  animation: rollUp 1s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
-}
-
-.code p {
-  line-height: 300%;
-  animation: lineHeight 1s ease-out 2s forwards;
-}
-
-.code strong {
-  color: var(--color-text-highlight);
-}
-
-.hellooo, .name h1, .whatami, .code {
+.hellooo, .name h1, .whatami {
   margin-left: 1.5vmin;
   margin-right: 1.5vmin;
 }
@@ -217,17 +186,12 @@ h3 {
 
 @media (min-aspect-ratio: 4/3) {
   .hellooo {
-    margin-top: 10vh;
     align-self: flex-start;
   }
 
   .whatami {
     align-self: flex-end;
     align-items: flex-start;
-  }
-
-  .code {
-    right: 0;
   }
 }
 
@@ -292,13 +256,4 @@ h3 {
   }
 }
 
-@keyframes lineHeight {
-  0% {
-    line-height: 300%;
-  }
-
-  100% {
-    line-height: 120%;
-  }
-}
 </style>

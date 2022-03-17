@@ -1,18 +1,19 @@
 <template>
-    <hero></hero>
-    <introduction></introduction>
-    <profile></profile>
+  <!-- <div class="galaxy"></div> -->
+  <hero></hero>
+  <introduction></introduction>
+  <profile></profile>
 
-    <section id="career">
-        <h1>Career</h1>
-    </section>
+  <section id="career">
+      <h1>Career</h1>
+  </section>
 
-    <section id="projects">
-        <h1>Projects</h1>
-    </section>
+  <section id="projects">
+      <h1>Projects</h1>
+  </section>
 
-    <footer></footer>
-    <navigation></navigation>
+  <footer></footer>
+  <navigation></navigation>
 
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <main>
-    <halfling></halfling>
     <card></card>
+    <magic-picture></magic-picture>
   </main>
 </template>
 
@@ -10,5 +10,6 @@ main {
   min-height: 100vh;
   max-width: 100vw;
   background-color: var(--color-background);
+  perspective: 1000px;
 }
 </style>
