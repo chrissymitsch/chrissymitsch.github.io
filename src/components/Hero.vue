@@ -6,6 +6,8 @@
       <h1 class="accent">Chrissy</h1>
       <h1>here.</h1>
     </div>
+    <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
+    <figure class="wave-front"></figure>
     <div class="whatami">
       <figure class="twinkle">
         <img src="./../assets/img/stern1.gif" class="big" /> <!-- big -->
@@ -20,8 +22,6 @@
       <h3>I'm a</h3>
       <h2 class="accent">Developer</h2>
     </div>
-    <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
-    <figure class="wave-front"></figure>
   </header>
 </template>
 
@@ -167,11 +167,11 @@ h3 {
 
 .wave-front, .wave-back {
   position: absolute;
-  bottom: 0;
+  bottom: max(-8vmin, -8vmax);
   width: 100vw;
-  height: 30vh;
-  background-position: top center;
-  background-size: cover;
+  height: 100vh;
+  background-position: bottom center;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
@@ -255,5 +255,4 @@ h3 {
     transform: scale(1);
   }
 }
-
 </style>

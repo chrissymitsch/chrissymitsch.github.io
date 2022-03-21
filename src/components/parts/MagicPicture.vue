@@ -1,5 +1,5 @@
 <template>
-  <div id="magic-picture">
+  <div id="magic-picture" v-bind:style="{ top: top + 'px' }">
     <div id="backface"></div>
     <div id="container">
       <video loop autoplay muted id="chocolatefrog">
@@ -12,13 +12,14 @@
 <style scoped>
 #magic-picture {
   position: absolute;
-  top: 35vh;
-  width: 100vw;
-  padding-right: max(0%, 25vw - 15vh);
+  top: 35vmin;
+  left: max(0%, 90vw - 40vmin);
+  width: 25vmin;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   transform-style: preserve-3d;
+  transform-origin: right;
   animation: float 10s ease-in-out 0s infinite normal forwards;
 }
 
@@ -34,9 +35,9 @@ video, #container, #backface {
 
 #container, #backface {
   position: absolute;
-  top: calc(-1 * min(25vh, 10rem) / 9 * 16);
-  width: min(25vh, 10rem);
-  height: calc(min(25vh, 10rem) / 9 * 16 - 1.5vh);
+  top: calc(-1 * 25vmin / 9 * 16);
+  width: 25vmin;
+  height: calc(25vmin / 9 * 16 - 1.5vh);
   margin: auto;
   perspective: 1000px;
 }
@@ -89,18 +90,42 @@ video, #container, #backface {
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: rotateZ(3deg) translateY(0);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: rotateZ(10deg) translateY(-10px);
+  }
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #magic-picture {
+    animation: none;
+    position: relative;
+    left: inherit;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  #container, #backface {
+    position: absolute;
+    top: -50vmax;
+    width: 50vmin;
+    height: calc(50vmin / 9 * 16 - 1.5vh);
+    margin: auto;
+    perspective: 1000px;
   }
 }
 
 </style>
 
-<script>
+<script scoped>
 export default {
+  data() {
+    return {
+      top: 0
+    }
+  },
   mounted() {
     var video = document.getElementById("chocolatefrog");
     var backface = document.getElementById("backface");
@@ -122,6 +147,17 @@ export default {
         }
       }, false);
     }, false);
+
+    this.scrollParallax();
+    window.addEventListener('scroll', this.scrollParallax);
   },
+  destroyed () {
+    window.removeEventListener('scroll', this.scrollParallax);
+  },
+  methods: {
+    scrollParallax() {
+      this.top = window.innerHeight - (window.scrollY / 2);
+    }
+  }
 }
 </script>
