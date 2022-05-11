@@ -1,8 +1,5 @@
 # Hellooo. Chrissy here. I'm a *Developer*
 
-if youWantToKnowMore(aboutMe)
-then scrollDown()
-endif
+## How to publish github pages
 
-## TBD
 

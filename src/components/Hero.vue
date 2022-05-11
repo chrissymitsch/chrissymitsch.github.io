@@ -1,51 +1,52 @@
 <template>
   <header id="top">
-    <figure class="wave-back"></figure>
-    <h2 class="hellooo">Hellooo.</h2>
-    <div class="name">
-      <h1 class="accent">Chrissy</h1>
-      <h1>here.</h1>
+    <figure class="twinkle">
+      <img src="./../assets/img/stern1.gif" class="l" />
+      <img src="./../assets/img/stern3.gif" class="s" />
+      <img src="./../assets/img/stern2.gif" class="m" />
+      <img src="./../assets/img/stern3.gif" class="s" />
+      <img src="./../assets/img/stern1.gif" class="l" />
+      <img src="./../assets/img/stern3.gif" class="m" />
+      <img src="./../assets/img/stern2.gif" class="m" />
+    </figure>
+    <figure class="wave back"></figure>
+    <div class="heading">
+      <h2 class="what">that's</h2>
+      <h1 class="who accent">Chrissy</h1>
+      <h2 class="whee">a developer</h2>
     </div>
-    <figure class="bridge"><img src="./../assets/img/steg.png" /></figure>
-    <figure class="wave-front"></figure>
-    <div class="whatami">
-      <figure class="twinkle">
-        <img src="./../assets/img/stern1.gif" class="big" /> <!-- big -->
-        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
-        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
-        <img src="./../assets/img/stern3.gif" class="small" /> <!-- smol -->
-        <img src="./../assets/img/stern2.gif" />
-        <img src="./../assets/img/stern2.gif" />
-        <img src="./../assets/img/stern1.gif" class="big" /> <!-- big -->
-        <img src="./../assets/img/stern2.gif" />
-      </figure>
-      <h3>I'm a</h3>
-      <h2 class="accent">Developer</h2>
-    </div>
+    <figure class="hero-image"><img src="./../assets/img/hero1.png" /></figure>
+    <figure class="wave front"></figure>
+    <figure class="scroll"><img src="./../assets/img/pfeil2.svg" alt="Scroll down!"></figure>
   </header>
 </template>
 
 <style scoped>
-header {
-  min-height: 100vh;
-  max-width: var(--max-content-width);
+.hero-image {
+  position: absolute;
   display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: auto;
-  row-gap: 5vh;
+  align-items: flex-end;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  height: 65vh;
+  overflow: hidden;
+  animation: heroIn 0.8s ease-out forwards;
 }
 
-.bridge {
-  position: absolute;
-  left: clamp(-20vh, calc(100vh - 150vw), 0%);
-  bottom: clamp(-20vh, calc(100vh - 150vw), 0%);
-  width: 100vh;
-  max-width: 100vw;
-  max-height: 100%;
-  transform: translateX(-10vw);
-  animation: bridgeIn 2s ease-out forwards;
+.hero-image img {
+  width: auto;
+  height: 100%;
+}
+
+.heading {
+  width: 70vmin;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 h1, h2, h3 {
@@ -62,141 +63,170 @@ h2 {
   font-size: var(--font-size-l);
 }
 
-h3 {
-  font-size: var(--font-size-m);
-}
-
-.hellooo {
-  margin-top: 15vh;
+.what {
+  margin-top: -35vmin;
+  align-self: flex-start;
   opacity: 0;
   animation: fadeIn 2s ease-out 0.25s forwards;
 }
 
-.name {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+header:before {
+  content: '';
+  position: absolute;
+  top: 28vmin;
+  left: 0;
+  display: block;
+  width: calc(calc(100vmax - 8vmin) / 2);
+  height: 4vmax;
+  background: url(./../assets/img/pfeil.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+  opacity: 0;
+  animation: fadeIn 2s ease-out 0.25s forwards;
+}
+
+.who {
   opacity: 0;
   transform: translateX(-5vw);
-  animation: rollIn 1s ease-out 0.5s forwards, fadeIn 2s ease-out 0.5s forwards;
+  animation: rollRight 1s ease-out 0.5s forwards, fadeIn 2s ease-out 0.5s forwards;
+  text-transform: uppercase;
 }
 
-.whatami {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-}
-
-.whatami h3 {
+.whee {
+  align-self: flex-end;
   opacity: 0;
   transform: translateY(-5vh);
   animation: rollDown 1s ease-out 1s forwards, fadeIn 1s ease-out 1s forwards;
 }
 
-.whatami .accent {
-  opacity: 0;
-  transform-origin: top center;
-  transform: scale(0.7);
-  animation: zoomIn 1s ease-out 1.5s forwards, fadeIn 1s ease-out 1.5s forwards;
-}
-
 .twinkle {
   position: absolute;
-  width: max-content;
+  width: 100%;
+  height: 100vh;
 }
 
 .twinkle img {
-  width: var(--font-size-m);
-  opacity: 0;
-  animation: zoomIn 1s ease-out 2s forwards, fadeIn 1s ease-out 2s forwards;
+  position: absolute;
 }
 
-.twinkle img.big {
-  width: var(--font-size-l);
+.twinkle img.l {
+  width: 5vmin;
 }
 
-.twinkle img.small {
-  width: calc(var(--font-size-s) + var(--font-size-xs));
+.twinkle img.m {
+  width: 3vmin;
+}
+
+.twinkle img.s {
+  width: 2vmin;
 }
 
 .twinkle img:nth-child(1) {
-  left: -40%;
-  top: var(--font-size-s);
+  left: 10%;
+  top: 25%;
 }
 
 .twinkle img:nth-child(2) {
-  left: -40%;
-  top: var(--font-size-s);
+  left: 5%;
+  top: 5%;
 }
 
 .twinkle img:nth-child(3) {
-  left: -35%;
-  top: 0;
+  left: 30%;
+  top: 15%;
 }
 
 .twinkle img:nth-child(4) {
-  left: -30%;
-  top: calc(var(--font-size-xl) + var(--font-size-s));
+  left: 50%;
+  bottom: 30%;
 }
 
 .twinkle img:nth-child(5) {
-  left: -20%;
-  top: var(--font-size-l);
+  right: 20%;
+  bottom: 25%;
 }
 
 .twinkle img:nth-child(6) {
-  left: 10%;
-  top: calc(var(--font-size-m) * (-1));
+  left: 65%;
+  top: 10%;
 }
 
 .twinkle img:nth-child(7) {
-  left: 30%;
-  top: var(--font-size-s);
+  right: 10%;
+  top: 35%;
 }
 
-.twinkle img:nth-child(8) {
-  left: -10%;
-  top: var(--font-size-xl);
-}
-
-.hellooo, .name h1, .whatami {
-  margin-left: 1.5vmin;
-  margin-right: 1.5vmin;
-}
-
-.wave-front, .wave-back {
+.wave {
   position: absolute;
-  bottom: max(-8vmin, -8vmax);
+  bottom: 0;
   width: 100vw;
-  height: 100vh;
+  height: 20vmin;
   background-position: bottom center;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.wave-front {
-  background-image: url(./../assets/img/wave-front.svg);
+.wave.front {
+  background-image: url(./../assets/img/wave-front.png);
 }
 
-.wave-back {
-  background-image: url(./../assets/img/wave-back.svg);
+.wave.back {
+  background-image: url(./../assets/img/wave-back.png);
+}
+
+.scroll {
+  position: absolute;
+  left: calc(50% - calc(3.5vmax / 2));
+  bottom: 2.5vmax;
+  width: 3.5vmax;
+  opacity: 0;
+  animation: scrollDown 3s ease-out 1s infinite;
 }
 
 
-@media (min-aspect-ratio: 4/3) {
-  .hellooo {
-    align-self: flex-start;
+@media (max-aspect-ratio: 4/3) {
+  header:before {
+    height: 6vmin;
+    top: 35vmin;
+    transform: rotate(305deg);
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .heading {
+    justify-content: flex-start;
   }
 
-  .whatami {
-    align-self: flex-end;
-    align-items: flex-start;
+  .what {
+    margin-top: 25vmin;
+  }
+
+  .hero-image img {
+    height: auto;
+    max-width: 180%;
+    max-height: 100%;
+  }
+
+  header:before {
+    height: 8vmin;
+    top: 45vmin;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-aspect-ratio: 2/3) {
+  header:before {
+    height: 8vh;
+    width: 8vh;
+    top: 55vw;
+    left: 30vw;
+    transform: rotate(305deg);
   }
 }
 
 
-@keyframes bridgeIn {
+@keyframes heroIn {
   0% {
     transform: translateX(-10vw);
   }
@@ -216,7 +246,7 @@ h3 {
   }
 }
 
-@keyframes rollIn {
+@keyframes rollRight {
   0% {
     transform: translateX(-5vw);
   }
@@ -236,23 +266,20 @@ h3 {
   }
 }
 
-@keyframes rollUp {
+@keyframes scrollDown {
   0% {
-    transform: translateY(5vh);
+    transform: translateY(-2vh);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 
   100% {
     transform: translateY(0);
+    opacity: 0;
   }
 }
 
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.7);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 </style>

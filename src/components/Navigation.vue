@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <a href="#top" class="code">
-      &lt;cm/&gt;
+    <a href="#top">
+      <img src="./../assets/img/logo-light.svg" alt="Chrissy Mitsch" />
     </a>
   </nav>
 </template>
@@ -9,13 +9,8 @@
 <style scoped>
 nav {
   position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-}
-
-.code {
-  color: var(--color-text-highlight);
-  font-size: var(--font-size-s)
+  left: 1vh;
+  top: 1vh;
+  width: 8vmin;
 }
 </style>

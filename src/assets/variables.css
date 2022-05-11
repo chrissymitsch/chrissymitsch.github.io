@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800;900&family=Nunito:wght@400;500;700&display=swap');
 
 :root {
-  --vt-c-phthalo-green: #012622;
-  --vt-c-deep-jungle-green: #004741;
+  --vt-c-oxford-blue: #0F1626;
+  --vt-c-space-cadet: #0E2640;
   --vt-c-cyclamen: #F375A8;
   --vt-c-yellow-green-crayola: #C4D37B;
   --vt-c-vegas-gold: #A89734;
@@ -13,8 +13,8 @@
 :root {
   --max-content-width: min(1024px, calc(100vmax - 50vmin));
   
-  --color-background: var(--vt-c-deep-jungle-green);
-  --color-background-dark: var(--vt-c-phthalo-green);
+  --color-background: var(--vt-c-space-cadet);
+  --color-background-dark: var(--vt-c-oxford-blue);
 
   --color-heading: var(--vt-c-white);
   --color-text: var(--vt-c-white);
@@ -26,8 +26,8 @@
   --font-family-text-accent: Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-family-text-code: Consolas, monospace;
 
-  --font-size-xl: max(min(8rem, 13.5vmin), 2rem);
-  --font-size-l: max(min(4rem, 8vmin), 1rem);
+  --font-size-xl: max(min(8rem, 11vmin), 2rem);
+  --font-size-l: max(min(4rem, 7vmin), 1rem);
   --font-size-m: max(min(3rem, 6vmin), 0.8rem);
   --font-size-s: max(min(1rem, 5vmin), 0.6rem);
   --font-size-xs: max(min(0.8rem, 3vmin), 0.3rem);
