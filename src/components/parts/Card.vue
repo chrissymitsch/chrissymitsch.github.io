@@ -11,29 +11,29 @@
     </figure>
   </div>
   
-  <aside v-bind:style="{ top: topText + 'px' }">
-    <p>
-      <mark>Creative</mark>
-      and
-      <mark>introverted</mark><br />
-      Master of
-      <mark>Media Computer Science</mark>.
-    </p>
-    <p>
-      Practising Software Development.<br />
-      Specialized in
-      <mark>Human-Centered Design</mark><br />
-      and
-      <mark>Frontend</mark> Technologies.
-    </p>
-
-    <p>
-      🛸Sci-Fi loving,<br />
-      🧘‍♀️Yoga enjoying,<br />
-      🍍Pineapple on Pizza eating<br />
-      😺Cat-Mom of Julia
-    </p>
-  </aside>
+  <section>
+    <aside>
+      <h1>Chrissy</h1>
+      <h3>[krɪsˈi], <em>developer</em></h3>
+      <p>
+        Creative Software Developer,<br />
+        User Experience and Usability Professional,<br />
+        specialized in Human-Centered Design,<br />
+        Gamification, Interactive 3D,<br />
+        Web and Frontend Technologies.
+      </p>
+      <p>
+        Well practised using Adobe products,<br />
+        enthusiastic over CSS and Javascript<br />
+        as well as App and Game Development.
+      </p>      <p>
+        🛸Sci-Fi loving,<br />
+        🧘‍♀️Yoga enjoying,<br />
+        🍍Pineapple on Pizza eating<br />
+        😺Cat-Mom of Julia
+      </p>
+    </aside>
+  </section>
 </template>
 
 <style scoped>
@@ -75,25 +75,47 @@ figure.pentagon-2 {
   top: max(-10rem, -15vmin);
 }
 
+section {
+  width: 50vmax;
+  padding-top: 10vmin;
+  max-width: 100%;
+}
+
 aside {
-  width: 90%;
-  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+  text-align: left;
+  font-family: 'Times New Roman', serif;
+  color: var(--color-background-dark);
   padding: 5vh;
+  background-color: var(--color-text);
+  border: 1vmax solid var(--color-text-highlight);
+  margin: auto;
+  box-shadow: 1vmin 2vmin 3vmin rgb(0, 0, 0, .5);
+;
+}
+
+aside h1 {
+  font-size: calc(var(--font-size-s) + var(--font-size-xs));
+  font-weight: 600;
+  line-height: 100%;
+}
+
+aside h3 {
+  border-bottom: .4vmin solid var(--color-text-highlight);
+  padding-bottom: 1.5vmax;
+  margin-bottom: 1.5vmax;
 }
 
 aside p {
-  font-weight: 500;
-  font-size: max(1.7vmax, 0.8rem);
+  margin-top: 1vmax;
+  line-height: 125%;
 }
 
 aside p:last-child {
   margin-top: 2vh;
   margin-bottom: 2vh;
-  color: var(--color-text-highlight);
-}
-
-aside p mark {
-  font-weight: 700;
+  color: var(--color-background);
 }
 
 @keyframes float {
@@ -106,9 +128,16 @@ aside p mark {
   }
 }
 
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 1/1) {
+ section {
+   width: 100%;
+   position: relative;
+ }
+}
+
+@media (max-aspect-ratio: 9/16) {
   aside {
-    width: 100vw;
+    width: 100%;
   }
 }
 </style>

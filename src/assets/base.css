@@ -46,6 +46,18 @@ img {
 
 a {
   text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text-accent);
+  display: inline-block;
+  transition: .25s;
+}
+
+a:before {
+  content: '🔗';
+}
+
+a:hover {
+  color: var(--color-text-highlight);
 }
 
 .accent, mark {

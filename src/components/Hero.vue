@@ -31,7 +31,8 @@
   bottom: 0;
   height: 65vh;
   overflow: hidden;
-  animation: heroIn 0.8s ease-out forwards;
+  transform-origin: left;
+  animation: heroIn 0.8s ease-in-out forwards;
 }
 
 .hero-image img {
@@ -88,16 +89,16 @@ header:before {
 
 .who {
   opacity: 0;
-  transform: translateX(-5vw);
-  animation: rollRight 1s ease-out 0.5s forwards, fadeIn 2s ease-out 0.5s forwards;
+  animation: bounceIn 1.8s ease-in-out forwards, fadeIn 1.5s ease-out 0.5s forwards;
   text-transform: uppercase;
 }
 
 .whee {
   align-self: flex-end;
   opacity: 0;
-  transform: translateY(-5vh);
-  animation: rollDown 1s ease-out 1s forwards, fadeIn 1s ease-out 1s forwards;
+  transform: translateY(-3vh);
+  transform-origin: bottom center;
+  animation: rollDown .8s ease-in-out 1s forwards, fadeIn .8s ease-out 1.25s forwards;
 }
 
 .twinkle {
@@ -107,7 +108,7 @@ header:before {
 }
 
 .twinkle img {
-  position: absolute;
+  position: fixed;
 }
 
 .twinkle img.l {
@@ -246,23 +247,47 @@ header:before {
   }
 }
 
-@keyframes rollRight {
+@keyframes bounceIn {
   0% {
-    transform: translateX(-5vw);
+    transform: scale(0);
   }
 
-  100% {
-    transform: translateX(0);
+  30% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  80% {
+    transform: scale(1);
   }
 }
 
 @keyframes rollDown {
   0% {
-    transform: translateY(-5vh);
+    transform: translateY(-3vh) scaleX(1) scaleY(1);
+  }
+
+  70% {
+    transform: translateY(3vh) scaleX(.9) scaleY(1.5);
+  }
+
+  85% {
+    transform: translateY(-1vh) scaleY(.9);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scaleX(1) scaleY(1);
   }
 }
 
