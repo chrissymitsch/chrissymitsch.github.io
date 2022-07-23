@@ -200,6 +200,7 @@ aside {
   width: 50vmax;
   max-width: 100%;
   padding: 0 3vmax;
+  margin-bottom: 20vmin;
   align-self: flex-end;
   display: flex;
   flex-flow: column;

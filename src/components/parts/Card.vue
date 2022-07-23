@@ -26,11 +26,13 @@
         Well practised using Adobe products,<br />
         enthusiastic over CSS and Javascript<br />
         as well as App and Game Development.
-      </p>      <p>
+      </p>
+      <p>
         🛸Sci-Fi loving,<br />
         🧘‍♀️Yoga enjoying,<br />
         🍍Pineapple on Pizza eating<br />
-        😺Cat-Mom of Julia
+        😺Cat-Mom of Julia<br />
+        <a href="https://pixlerin.de" target="blank">pixlerin.de</a>
       </p>
     </aside>
   </section>
@@ -57,6 +59,7 @@ figure.pentagon-0 {
   height: 48vmin;
   transform: rotate(345deg);
   left: max(0%, 25vw - 15vh);
+  top: calc(100vh - 100vmin);
 }
 
 figure.pentagon-1 {
@@ -72,7 +75,7 @@ figure.pentagon-2 {
   height: 18vmin;
   transform: rotate(5deg);
   left: max(0%, 90vw - 15vmin);
-  top: max(-10rem, -15vmin);
+  top: 10px;
 }
 
 section {

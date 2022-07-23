@@ -109,6 +109,17 @@ section {
   background-image: url(./../../assets/img/wave-back.png);
 }
 
+@media (max-aspect-ratio: 2/3) {
+  .animate {
+    animation: rollLeftOpacity 1s ease-in-out forwards;
+  }
+
+  .reanimate {
+    animation: rollRightOpacity .5s ease-in-out forwards;
+  }
+}
+
+
 @keyframes rollLeft {
   0% {
     transform: translateX(0);
@@ -124,6 +135,28 @@ section {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes rollLeftOpacity {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 0.25;
+  }
+}
+
+@keyframes rollRightOpacity {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 </style>
