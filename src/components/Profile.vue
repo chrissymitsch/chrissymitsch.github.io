@@ -176,6 +176,8 @@
       <article class="top left more current" v-if="showMore">
         Scroll down 🦄🌈 <strong>to the next section!</strong>
       </article>
+
+      <article class="more arrow" v-if="showMore"></article>
     </aside>
 
     <section class="overlayImage" v-if="showImage" v-on:click="closeImage()">
@@ -322,6 +324,17 @@ small {
 }
 .continue em:nth-child(3) {
   animation: typing 1.5s ease-in-out .5s infinite;
+}
+
+.more.arrow:after {
+  content: '';
+  display: block;
+  width: 4vmax;
+  height: 4vmax;
+  background: url(./../assets/img/pfeil.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: rotate(300deg);
 }
 
 @keyframes typing {
