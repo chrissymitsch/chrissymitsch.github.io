@@ -2,7 +2,7 @@
   <section ref="kid">
     <figure class="kid" :class="{ fixed }" :style="{ bottom: posBottom+'px' }"></figure>
   </section>
-  <figure class="wave back" ref="wave2"></figure>
+  <figure class="end-of-section" ref="eos"></figure>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default ({
   methods: {
     setHalflingPosition() {
       const halflingPositionTop = this.$refs.kid?.getBoundingClientRect().top;
-      const wavePositionBottom = this.$refs.wave2?.getBoundingClientRect().bottom;
+      const wavePositionBottom = this.$refs.eos?.getBoundingClientRect().bottom;
       const height = window.innerHeight;
       const width = window.innerWidth;
 
@@ -52,7 +52,6 @@ export default ({
 section {
   min-height: 100vmin;
   max-width: 100%;
-  margin-top: -12vw;
 }
 
 .kid {
@@ -61,7 +60,7 @@ section {
   bottom: 0;
   min-width: 100vmin;
   width: 50%;
-  height: 65vmin;
+  height: 55vmin;
   background: url(/src/assets/img/projects/kid-transparent.png) no-repeat;
   background-position: bottom right;
   background-size: contain;
@@ -73,4 +72,10 @@ section {
   position: fixed;
 }
 
+.end-of-section {
+  position: absolute;
+  width: 100vw;
+  height: 0;
+  bottom: 0;
+}
 </style>

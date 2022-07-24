@@ -1,23 +1,22 @@
 <template>
   <section id="projects">
-  </section>
-  <section>
+    <nerd></nerd>
     <aside>
       <h1 class="accent">Everything</h1>
       <h2>just for fun</h2>
     </aside>
-    <nerd></nerd>
+    <article>
+      This is under construction
+    </article>
   </section>
 </template>
 
 <style scoped>
 section#projects {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vmin;
+  max-width: 100%;
   display: flex;
-  justify-content: center;
-  flex-flow: row;
+  flex-flow: column;
   background-image: url(./../assets/img/projects/tempel.png);
   background-position: top center;
   background-size: 100%;
@@ -26,7 +25,7 @@ section#projects {
 
 aside {
   width: 75vmax;
-  margin-top: 12vw;
+  margin-top: -80vmin;
   max-width: 100%;
   padding: 0 3vmax;
   align-self: flex-start;
