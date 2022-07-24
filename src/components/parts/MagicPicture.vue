@@ -2,46 +2,49 @@
   <section>
     <div class="container" v-bind:style="{ top: top + 'px' }">
       <div id="photo1" class="frame">
-        <img src="./../../assets/img/julia.jpg" alt="Julia" />
+        <img src="./../../assets/img/intro/julia.jpg" alt="Julia" />
       </div>
       <div id="photo2" class="frame">
-        <img src="./../../assets/img/starry-nuernberg.png" alt="Nürnberg" />
+        <img src="./../../assets/img/intro/starry-nuernberg.png" alt="Nürnberg" />
       </div>
       <div id="photo3" class="frame">
-        <img src="./../../assets/img/exploring-the-world.jpg" alt="Laydbug" />
+        <img src="./../../assets/img/intro/exploring-the-world.jpg" alt="Laydbug" />
       </div>
       <div id="photo9" class="frame">
-        <img src="./../../assets/img/tele.jpeg" alt="Telescope" />
+        <img src="./../../assets/img/intro/tele.jpeg" alt="Telescope" />
       </div>
       <div id="photo4" class="frame">
-        <img src="./../../assets/img/stormtrooper.jpg" alt="Stormtrooper" />
+        <img src="./../../assets/img/intro/stormtrooper.jpg" alt="Stormtrooper" />
       </div>
       <div id="photo5" class="frame">
-        <img src="./../../assets/img/stargazing.jpg" alt="Stargazing" />
+        <img src="./../../assets/img/intro/stargazing.jpg" alt="Stargazing" />
       </div>
       <div id="photo5-2" class="frame">
-        <img src="./../../assets/img/ufo.jpg" alt="UFO" />
+        <img src="./../../assets/img/intro/ufo.jpg" alt="UFO" />
       </div>
       <div id="photo6" class="frame">
-        <img src="./../../assets/img/vangogh.jpg" alt="Painting" />
+        <img src="./../../assets/img/intro/vangogh.jpg" alt="Painting" />
       </div>
       <div id="photo7" class="frame">
-        <img src="./../../assets/img/pumpkin.jpg" alt="Pumpkins" />
+        <img src="./../../assets/img/intro/pumpkin.jpg" alt="Pumpkins" />
       </div>
       <div id="photo8" class="frame">
-        <img src="./../../assets/img/watercolor.jpg" alt="Watercolor Galaxy" />
+        <img src="./../../assets/img/intro/watercolor.jpg" alt="Watercolor Galaxy" />
       </div>
       <div id="photo10" class="frame">
-        <img src="./../../assets/img/cabin.jpg" alt="Cabin" />
+        <img src="./../../assets/img/intro/cabin.jpg" alt="Cabin" />
       </div>
       <div id="photo11" class="frame">
-        <img src="./../../assets/img/et.jpg" alt="E.T" />
+        <img src="./../../assets/img/intro/et.jpg" alt="E.T" />
       </div>
       <div id="photo12" class="frame">
-        <img src="./../../assets/img/indian-summer.jpg" alt="Indian Summer" />
+        <img src="./../../assets/img/intro/indian-summer.jpg" alt="Indian Summer" />
       </div>
       <div id="photo13" class="frame">
-        <img src="./../../assets/img/hp.jpg" alt="Harry Potter" />
+        <img src="./../../assets/img/intro/hp.jpg" alt="Harry Potter" />
+      </div>
+      <div id="photo14" class="frame">
+        <img src="./../../assets/img/intro/pumpkinjump.jpg" alt="Very Great Pumpkins" />
       </div>
       <div id="magic-picture">
         <video loop autoplay muted id="chocolatefrog" class="frame">
@@ -90,7 +93,7 @@ section:after {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(11, 1fr);
   grid-gap: 1vmax;
 }
 
@@ -108,6 +111,7 @@ section:after {
   grid-column-end: span 3;
   grid-row-start: 3;
   grid-row-end: span 4;
+  margin-top: 2vmax;
 }
 
 #cert1 {
@@ -157,6 +161,7 @@ video {
   grid-column-end: span 2;
   grid-row-start: 4;
   grid-row-end: span 2;
+  margin-top: 0.5vmax;
 }
 
 #photo2 {
@@ -250,6 +255,14 @@ video {
   grid-column-end: span 2;
   grid-row-start: 3;
   grid-row-end: span 2;
+}
+
+#photo14 {
+  grid-column-start: 8;
+  grid-column-end: span 4;
+  grid-row-start: 8;
+  grid-row-end: span 3;
+  margin-top: -3vmax;
 }
 
 @media (max-aspect-ratio: 1/1) {

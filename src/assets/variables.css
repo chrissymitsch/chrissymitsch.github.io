@@ -1,4 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800;900&family=Nunito:wght@400;500;700&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat/static/Montserrat-Black.ttf");
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("./fonts/Nunito/static/Nunito-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("./fonts/Nunito/static/Nunito-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("./fonts/Nunito/static/Nunito-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("./fonts/Nunito/static/Nunito-Bold.ttf");
+  font-weight: 700;
+}
+
 
 :root {
   --vt-c-oxford-blue: #0F1626;

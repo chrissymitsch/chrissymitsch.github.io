@@ -9,7 +9,7 @@
         Hellooo 👋 Chrissy here!<br />
         I work as a Software Developer at
         <a href="https://www.mediendesign.de/" about="blank">
-          <img src="./../assets/img/mediendesign.png" alt="mediendesign AG" />
+          <img src="./../assets/img/profile/mediendesign.png" alt="mediendesign AG" />
         </a><br />
         <small>since June 2021</small>
       </article>
@@ -286,11 +286,11 @@ article {
   width: 60%;
 }
 
-.current a, .thumbnail img, .continue {
+.current a img, .thumbnail img, .continue {
   transition: .5s;
 }
 
-.current img a:hover, .thumbnail img:hover, .continue:hover {
+.current a:hover img, .thumbnail img:hover, .continue:hover {
   opacity: .5;
 }
 

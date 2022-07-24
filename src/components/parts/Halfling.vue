@@ -69,7 +69,7 @@ section {
   bottom: 0;
   width: 100%;
   height: 100vmin;
-  background: url(/src/assets/img/halfling.png) no-repeat;
+  background: url(/src/assets/img/profile/halfling.png) no-repeat;
   background-position: bottom center;
   background-size: contain;
 }
@@ -99,13 +99,13 @@ section {
 }
 
 .wave.front {
-  top: 0;
+  top: -1px;
   transform: rotate(180deg);
   background-image: url(./../../assets/img/wave-front.png);
 }
 
 .wave.back {
-  bottom: 0;
+  bottom: -1px;
   background-image: url(./../../assets/img/wave-back.png);
 }
 
