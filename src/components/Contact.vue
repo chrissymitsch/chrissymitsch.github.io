@@ -36,8 +36,8 @@
             <img src="./../assets/img/contact/youtube.png" alt="YouTube" />
           </a>
         </figure>
-        <figure id="mail">
-          Or send your thoughts to <strong>ed.nirelxip@ollah</strong>
+        <figure id="thoughts">
+          <p v-html="thoughts" />
         </figure>
       </article>
     </aside>
@@ -46,6 +46,21 @@
     <figure class="wave front show-in-portrait"></figure>
   </section>
 </template>
+
+<script>
+export default ({
+  computed: {
+    thoughts() {
+      let part1 = 'hallo';
+      let part2 = Math.pow(2,6);
+      let part3 = String.fromCharCode(part2);
+      let part4 = 'pixlerin.de'
+      let part5 = part1 + part3 + part4;
+      return 'Or send your thoughts to <a href=' + 'mai' + 'lto' + ':' + part5 + '>' + part5 + '</a>'
+    }
+  },
+})
+</script>
 
 <style scoped>
 section {
@@ -129,18 +144,11 @@ a:hover img {
   opacity: .5;
 }
 
-#mail {
+#thoughts {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row-start: 3;
   grid-row-end: span 1;
-}
-
-#mail strong {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  font-weight: 600;
-  color: var(--color-text-accent);
 }
 
 h1 {

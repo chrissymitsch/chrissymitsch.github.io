@@ -1,5 +1,5 @@
 <template>
-  <section id="projects">
+  <section id="fun">
     <nerd></nerd>
     <aside>
       <h1 class="accent">Everything</h1>
@@ -12,7 +12,7 @@
 </template>
 
 <style scoped>
-section#projects {
+section#fun {
   min-height: 100vmin;
   max-width: 100%;
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="about">
     <card></card>
     <magic-picture></magic-picture>
   </main>
