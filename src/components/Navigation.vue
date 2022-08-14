@@ -1,9 +1,9 @@
 <template>
-  <nav id="navi" :class="{ open: !collapsed }">
+  <nav id="navi" :class="{ open: !collapsed }" v-on:click="toggleMenu()">
     <ul>
       <li>
         <figure>
-          <p v-on:click="toggleMenu()">
+          <p>
             <img src="../assets/img/burger.png" v-if="collapsed"/>
             <img src="../assets/img/x.png" v-if="!collapsed"/>
           </p>
@@ -44,15 +44,15 @@ nav#logo {
 }
 
 nav#navi {
-  height: 100vh;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
   padding: calc((1vh + 8vmin - var(--font-size-s)) / 2);
 }
 
 nav#navi.open {
   background: linear-gradient(225deg, rgba(15,22,38,1) 0%, rgba(15,22,38,0) 50vmax);
+  width: 100%;
+  height: 100vh;
 }
 
 nav#logo img {

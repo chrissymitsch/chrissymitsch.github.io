@@ -24,7 +24,7 @@ section#fun {
 }
 
 aside {
-  width: 75vmax;
+  width: 100vmax;
   margin-top: -80vmin;
   max-width: 100%;
   padding: 0 3vmax;
@@ -42,7 +42,7 @@ h1, h2 {
 h1 {
   font-size: var(--font-size-l);
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
 }
 
 h2 {
@@ -50,15 +50,8 @@ h2 {
   text-align: center;
 }
 
-
-@media (max-aspect-ratio: 1/1) {
-  aside {
-    width: 100vmax;
-  }
-
-  h1 {
-    text-align: center;
-  }
+article {
+  text-align: center;
 }
 
 </style>
