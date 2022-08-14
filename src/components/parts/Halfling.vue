@@ -1,7 +1,8 @@
 <template>
   <figure class="wave front"></figure>
   <section ref="halfling">
-    <figure class="halfling" :class="{ fixed, animate, reanimate }" :style="{ bottom: posBottom+'px' }"></figure>
+    <figure class="halfling hide-for-small" :class="{ fixed, animate, reanimate }" :style="{ bottom: posBottom+'px' }"></figure>
+    <figure class="halfling show-for-small"></figure>
   </section>
   <figure class="wave back" ref="wave"></figure>
 </template>
@@ -74,6 +75,14 @@ section {
   background-size: contain;
 }
 
+.halfling.show-for-small {
+  display: none;
+}
+
+.halfling.hide-for-small {
+  display: inherit;
+}
+
 .fixed {
   top: inherit;
   bottom: 0;
@@ -110,6 +119,15 @@ section {
 }
 
 @media (max-aspect-ratio: 2/3) {
+  .halfling.show-for-small {
+    display: inherit;
+    margin-bottom: 1em;
+  }
+
+  .halfling.hide-for-small {
+    display: none;
+  }
+
   .animate {
     animation: rollLeftOpacity 1s ease-in-out forwards;
   }

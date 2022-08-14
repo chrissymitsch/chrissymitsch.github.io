@@ -1,6 +1,7 @@
 <template>
   <section ref="kid">
-    <figure class="kid" :class="{ fixed }" :style="{ bottom: posBottom+'px' }"></figure>
+    <figure class="kid hide-for-small" :class="{ fixed }" :style="{ bottom: posBottom+'px' }"></figure>
+    <figure class="kid show-for-small"></figure>
   </section>
   <figure class="end-of-section" ref="eos"></figure>
 </template>
@@ -66,6 +67,14 @@ section {
   background-size: contain;
 }
 
+.kid.show-for-small {
+  display: none;
+}
+
+.kid.hide-for-small {
+  display: inherit;
+}
+
 .fixed {
   top: inherit;
   bottom: 0;
@@ -77,5 +86,16 @@ section {
   width: 100vw;
   height: 0;
   bottom: 0;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .kid.show-for-small {
+    display: inherit;
+    margin-bottom: 1em;
+  }
+
+  .kid.hide-for-small {
+    display: none;
+  }
 }
 </style>
