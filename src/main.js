@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import Card from './components/parts/Card.vue'
+import Contact from './components/Contact.vue'
 import Halfling from './components/parts/Halfling.vue'
 import Hero from './components/Hero.vue'
 import Introduction from './components/Introduction.vue'
@@ -14,6 +15,7 @@ const app = createApp(App)
 
 app
 .component('Card', Card)
+.component('Contact', Contact)
 .component('Halfling', Halfling)
 .component('Hero', Hero)
 .component('Introduction', Introduction)

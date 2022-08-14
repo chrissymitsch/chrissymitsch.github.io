@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="about">
     <card></card>
     <magic-picture></magic-picture>
   </main>
@@ -11,6 +11,7 @@ main {
   max-width: 100%;
   background-color: var(--color-background);
   perspective: 1000px;
+  overflow: hidden;
 }
 
 main:after {
