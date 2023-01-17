@@ -32,7 +32,7 @@
           </a>
         </figure>
         <figure>
-          <a href="https://www.youtube.com/channel/UCFxg5VCM1LezWqEUOoE_vVw" target="_blank">
+          <a href="https://www.youtube.com/@pixlerin" target="_blank">
             <img src="./../assets/img/contact/youtube.png" alt="YouTube" />
           </a>
         </figure>
@@ -64,6 +64,7 @@ export default ({
 
 <style scoped>
 section {
+  margin-top: 20vmin;
   min-height: 100vmin;
   max-width: 100%;
   display: flex;

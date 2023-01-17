@@ -1,6 +1,6 @@
 <template>
   <section id="insights">
-    <halfling></halfling>
+    <halfling :showSmall="false"></halfling>
     <aside>
       <h1 class="accent">Insights</h1>
       <h2>what I do</h2>
@@ -184,6 +184,7 @@
       <img v-bind:src="imageUrl" v-bind:alt="imageTitle" />
     </section>
 
+    <halfling :showSmall="true"></halfling>
   </section>
 </template>
 

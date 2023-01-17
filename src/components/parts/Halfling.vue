@@ -1,14 +1,19 @@
 <template>
-  <figure class="wave front"></figure>
-  <section ref="halfling">
+  <figure v-if="!showSmall" class="wave front"></figure>
+  <section class="section-hide-small" v-if="!showSmall" ref="halfling">
     <figure class="halfling hide-for-small" :class="{ fixed, animate, reanimate }" :style="{ bottom: posBottom+'px' }"></figure>
+  </section>
+  <section class="section-show-small" v-if="showSmall" ref="halfling">
     <figure class="halfling show-for-small"></figure>
   </section>
-  <figure class="wave back" ref="wave"></figure>
+  <figure class="wave back" ref="wave" :class="{ 'hide-for-small': !showSmall }"></figure>
 </template>
 
 <script>
 export default ({
+  props: {
+    showSmall: Boolean
+  },
   data() {
     return {
       fixed: false,
@@ -64,6 +69,14 @@ section {
   max-width: 100%;
 }
 
+.section-hide-small {
+    min-height: 100vmin;
+  }
+
+.section-show-small {
+  min-height: 0;
+}
+
 .halfling {
   position: absolute;
   left: 0;
@@ -75,11 +88,11 @@ section {
   background-size: contain;
 }
 
-.halfling.show-for-small {
+.show-for-small {
   display: none;
 }
 
-.halfling.hide-for-small {
+.hide-for-small {
   display: inherit;
 }
 
@@ -119,12 +132,23 @@ section {
 }
 
 @media (max-aspect-ratio: 2/3) {
+  .section-hide-small {
+    min-height: 0;
+  }
+
+  .section-show-small {
+    min-height: 100vmin;
+  }
+
   .halfling.show-for-small {
-    display: inherit;
     margin-bottom: 1em;
   }
 
-  .halfling.hide-for-small {
+  .show-for-small {
+    display: inherit;
+  }
+
+  .hide-for-small {
     display: none;
   }
 
