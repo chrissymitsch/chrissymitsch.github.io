@@ -2,7 +2,6 @@
   <hero></hero>
   <introduction></introduction>
   <profile></profile>
-  <projects></projects>
   <contact></contact>
 
   <footer>
