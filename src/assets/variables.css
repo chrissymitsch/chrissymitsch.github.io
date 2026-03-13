@@ -1,90 +1,88 @@
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Thin.ttf");
   font-weight: 100;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
   font-weight: 800;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./fonts/Montserrat/static/Montserrat-Black.ttf");
   font-weight: 900;
 }
 
-
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   src: url("./fonts/Nunito/static/Nunito-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   src: url("./fonts/Nunito/static/Nunito-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   src: url("./fonts/Nunito/static/Nunito-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   src: url("./fonts/Nunito/static/Nunito-Bold.ttf");
   font-weight: 700;
 }
 
-
 :root {
-  --vt-c-oxford-blue: #0F1626;
-  --vt-c-space-cadet: #0E2640;
-  --vt-c-cyclamen: #F375A8;
-  --vt-c-yellow-green-crayola: #C4D37B;
-  --vt-c-vegas-gold: #A89734;
+  --vt-c-oxford-blue: #0f1626;
+  --vt-c-space-cadet: #000022;
+  --vt-c-cyclamen: #f375a8;
+  --vt-c-yellow-green-crayola: #c4d37b;
+  --vt-c-vegas-gold: #a89734;
   --vt-c-white: #eeeeee;
 }
 
 /* semantic color variables for this project */
 :root {
   --max-content-width: min(1024px, calc(100vmax - 50vmin));
-  
+
   --color-background: var(--vt-c-space-cadet);
   --color-background-dark: var(--vt-c-oxford-blue);
 
@@ -94,8 +92,13 @@
   --color-text-highlight: var(--vt-c-yellow-green-crayola);
   --color-text-lowlight: var(--vt-c-vegas-gold);
 
-  --font-family-text: Inter, -apple-system, BlinkMacSystemFont, Nunito, Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-family-text-accent: Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family-text:
+    Inter, -apple-system, BlinkMacSystemFont, Nunito, Montserrat, Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-family-text-accent:
+    Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   --font-family-text-code: Consolas, monospace;
 
   --font-size-xl: max(min(8rem, 11vmin), 2rem);

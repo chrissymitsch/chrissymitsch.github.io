@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
     <figure class="wave back show-in-landscape"></figure>
-    <figure class="hero-image show-in-landscape"><img src="./../assets/img/hero2.png" /></figure>
+    <figure class="hero-image show-in-landscape"><img src="./../assets/img/hero1.png" /></figure>
     <figure class="wave front show-in-landscape"></figure>
     <aside>
       <h1 class="accent">Find me here</h1>
@@ -42,7 +42,7 @@
       </article>
     </aside>
     <figure class="wave back show-in-portrait"></figure>
-    <figure class="hero-image show-in-portrait"><img src="./../assets/img/hero2.png" /></figure>
+    <figure class="hero-image show-in-portrait"><img src="./../assets/img/hero1.png" /></figure>
     <figure class="wave front show-in-portrait"></figure>
   </section>
 </template>
